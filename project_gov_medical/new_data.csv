@@ -1,0 +1,82 @@
+Case Count,Gender,Age Decade,Municipality,Community,Date Reported,Estimated Date of Onset,Acquisition,Status
+38481,Male,70s,Other,Pending Neighbourhood,3/3/2022,2/28/2022,Under Investigation,Self-Isolating
+38484,Male,Under 20,Vaughan,Maple,3/3/2022,2/28/2022,Under Investigation,Self-Isolating
+38490,Under Investigation,50s,Vaughan,Thornhill,3/3/2022,3/3/2022,Under Investigation,Self-Isolating
+38616,Male,20s,King,Pending Neighbourhood,3/3/2022,2/28/2022,Under Investigation,Self-Isolating
+38617,Male,30s,Newmarket,Pending Neighbourhood,3/3/2022,2/7/2022,Close Contact,Resolved
+38619,Male,30s,Markham,Pending Neighbourhood,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38621,Female,50s,Vaughan,Thornhill,3/3/2022,2/27/2022,Under Investigation,Self-Isolating
+38628,Female,20s,Richmond Hill,Pending Neighbourhood,3/3/2022,2/25/2022,Under Investigation,Self-Isolating
+38629,Male,60s,Markham,Pending Neighbourhood,3/3/2022,3/1/2022,Travel,Self-Isolating
+38630,Male,20s,Markham,Pending Neighbourhood,3/3/2022,2/28/2022,Travel,Self-Isolating
+38631,Female,Under 20,Newmarket,Pending Neighbourhood,3/3/2022,2/28/2022,Under Investigation,Self-Isolating
+38657,Male,Under 20,King,Pending Neighbourhood,3/3/2022,2/26/2022,Close Contact,Resolved
+38665,Male,30s,Markham,Pending Neighbourhood,3/3/2022,2/28/2022,Local Transmission,Self-Isolating
+38667,Female,30s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38680,Female,Under 20,Richmond Hill,Pending Neighbourhood,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38681,Male,Under 20,Vaughan,Woodbridge,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38697,Female,60s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38700,Female,70s,Vaughan,Woodbridge,3/3/2022,3/2/2022,Close Contact,Self-Isolating
+38707,Female,40s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/2/2022,Close Contact,Self-Isolating
+38711,Female,30s,Other,Pending Neighbourhood,3/3/2022,2/1/2022,Under Investigation,Resolved
+38712,Female,50s,Newmarket,Pending Neighbourhood,3/3/2022,2/25/2022,Under Investigation,Resolved
+38713,Female,50s,Georgina,Pending Neighbourhood,3/3/2022,2/25/2022,Close Contact,Resolved
+38714,Female,30s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/1/2022,Workplace Outbreak,Self-Isolating
+38715,Female,50s,Vaughan,Maple,3/3/2022,2/22/2022,Under Investigation,Resolved
+38718,Male,60s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38719,Female,70s,King,Pending Neighbourhood,3/3/2022,3/1/2022,Under Investigation,Hospitalized
+38720,Female,Under 20,Vaughan,Woodbridge,3/3/2022,3/1/2022,Local Transmission,Self-Isolating
+38721,Female,30s,Vaughan,Woodbridge,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38723,Male,Under 20,Aurora,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38724,Male,50s,Vaughan,Maple,3/3/2022,2/22/2022,Local Transmission,Resolved
+38727,Female,40s,Whitchurch-Stouffville,Pending Neighbourhood,3/3/2022,2/25/2022,Under Investigation,Resolved
+38728,Female,50s,Newmarket,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38729,Female,90s,Whitchurch-Stouffville,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38730,Male,30s,Vaughan,Woodbridge,3/3/2022,3/1/2022,Close Contact,Self-Isolating
+38732,Female,90s,Newmarket,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38737,Female,60s,East Gwillimbury,Pending Neighbourhood,3/3/2022,2/6/2022,Under Investigation,Resolved
+38738,Female,50s,Vaughan,Concord,3/3/2022,3/1/2022,Close Contact,Self-Isolating
+38740,Male,40s,Georgina,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38741,Male,40s,Georgina,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38743,Female,Under 20,Richmond Hill,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38750,Male,60s,Whitchurch-Stouffville,Pending Neighbourhood,3/3/2022,3/2/2022,Local Transmission,Self-Isolating
+38770,Male,20s,Markham,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38777,Female,30s,Georgina,Pending Neighbourhood,3/3/2022,2/28/2022,Under Investigation,Self-Isolating
+38778,Male,40s,Georgina,Pending Neighbourhood,3/3/2022,2/27/2022,Close Contact,Self-Isolating
+38779,Male,50s,Aurora,Pending Neighbourhood,3/3/2022,3/1/2022,Close Contact,Self-Isolating
+38780,Female,Under 20,Richmond Hill,Pending Neighbourhood,3/3/2022,2/27/2022,Close Contact,Self-Isolating
+38781,Female,50s,Georgina,Pending Neighbourhood,3/3/2022,2/28/2022,Close Contact,Self-Isolating
+38782,Male,60s,Vaughan,Thornhill,3/3/2022,2/27/2022,Under Investigation,Self-Isolating
+38784,Female,50s,Vaughan,Woodbridge,3/3/2022,2/25/2022,Travel,Self-Isolating
+38785,Male,40s,Georgina,Pending Neighbourhood,3/3/2022,3/2/2022,Institutional Outbreak,Self-Isolating
+38790,Male,20s,Vaughan,Thornhill,3/3/2022,2/28/2022,Under Investigation,Self-Isolating
+38796,Male,80s,Vaughan,Woodbridge,3/3/2022,2/27/2022,Under Investigation,Self-Isolating
+38797,Female,80s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/2/2022,Institutional Outbreak,Self-Isolating
+38798,Female,80s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/2/2022,Institutional Outbreak,Self-Isolating
+38799,Female,80s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/2/2022,Institutional Outbreak,Self-Isolating
+38800,Male,70s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/2/2022,Institutional Outbreak,Self-Isolating
+38801,Female,80s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/2/2022,Institutional Outbreak,Self-Isolating
+38805,Female,50s,Vaughan,Thornhill,3/3/2022,2/28/2022,Local Transmission,Self-Isolating
+38811,Female,20s,Markham,Pending Neighbourhood,3/3/2022,2/26/2022,Under Investigation,Resolved
+38812,Male,50s,King,Pending Neighbourhood,3/3/2022,2/28/2022,Local Transmission,Self-Isolating
+38813,Male,20s,Newmarket,Pending Neighbourhood,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38816,Female,30s,East Gwillimbury,Pending Neighbourhood,3/3/2022,2/26/2022,Under Investigation,Resolved
+38818,Male,30s,East Gwillimbury,Pending Neighbourhood,3/3/2022,2/27/2022,Close Contact,Self-Isolating
+38831,Female,Under 20,Vaughan,Woodbridge,3/3/2022,3/1/2022,Close Contact,Self-Isolating
+38832,Male,50s,Vaughan,Maple,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38833,Male,30s,Vaughan,Thornhill,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38835,Male,Under 20,Markham,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38836,Female,40s,Markham,Pending Neighbourhood,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
+38838,Male,50s,Newmarket,Pending Neighbourhood,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38840,Male,20s,Newmarket,Pending Neighbourhood,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38842,Male,40s,Aurora,Pending Neighbourhood,3/3/2022,2/18/2022,Under Investigation,Resolved
+38849,Male,Under 20,Vaughan,Thornhill,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38852,Female,40s,Vaughan,Thornhill,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38853,Male,40s,Vaughan,Thornhill,3/3/2022,3/1/2022,Local Transmission,Self-Isolating
+38854,Female,20s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/1/2022,Under Investigation,Self-Isolating
+38855,Female,70s,Markham,Pending Neighbourhood,3/3/2022,2/24/2022,Under Investigation,Self-Isolating
+38856,Male,Under 20,King,Pending Neighbourhood,3/3/2022,3/3/2022,Under Investigation,Self-Isolating
+38860,Male,60s,Vaughan,Maple,3/3/2022,3/3/2022,Under Investigation,Self-Isolating
+38871,Male,20s,Richmond Hill,Pending Neighbourhood,3/3/2022,3/3/2022,Under Investigation,Self-Isolating
+38872,Male,80s,Markham,Pending Neighbourhood,3/3/2022,3/3/2022,Under Investigation,Self-Isolating
+38873,Female,20s,Vaughan,Woodbridge,3/3/2022,3/2/2022,Under Investigation,Self-Isolating
