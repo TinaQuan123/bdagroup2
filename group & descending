@@ -1,0 +1,6 @@
+Demand---Using Sales.SalesOrderHeader, how many sales occurred in each territory between July 1, 2005 and December 31, 2006? 
+ Order the results by the sale count in descending order.
+
+
+Code-select territoryID, count(*) as salecount from Sales.SalesOrderHeader where orderdate between '7/1/2005' and '12/31/2006' group by TerritoryID order by salecount desc
+ 
