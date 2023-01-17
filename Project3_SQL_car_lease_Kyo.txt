@@ -1,0 +1,158 @@
+create or alter procedure usp_dealer_activity_overview(@m1 datetime,@m2 datetime,@m3 datetime,@m4 datetime) 
+as 
+begin
+
+with cte_year_month_dealer as 
+(
+select distinct [Month],DealerName
+from car_lease.DimDate cross join 
+(select distinct DealerName
+ from datahub..dealer2) a
+),
+
+cte_submission_history as 
+(
+select h.application_id,h.submission_id,h.submission_date,h.submission_mth,h.revenue,a.status, d.DealerName
+from datahub..submission_history2 h join datahub..application a 
+on h.application_id = a.application_id
+join datahub..dealer2 d 
+on a.dealer_key = d.dealer_key
+),
+
+cte_submission_history2 as
+(
+select top 10000 t.DealerName,t.[Month],coalesce(count(distinct(h2.application_id)),0) as num_unique_application,
+row_number() over (partition by t.DealerName order by t.[Month]) as row_indicator
+from cte_year_month_dealer t left join cte_submission_history h2
+on t.[Month] = convert(varchar,h2.submission_mth,23) and t.DealerName = h2.DealerName
+--where t.DealerName in ('Dick Genthe Chevrolet Inc','Irwin Motors')
+group by t.DealerName,t.[Month]
+order by t.DealerName,t.[Month]
+),
+
+cte_submission_history3 as
+(
+select DealerName,
+sum(case when [Month] = @m1 then num_unique_application else 0 end) as m1_activity,
+sum(case when [Month] = @m2 then num_unique_application else 0 end) as m2_activity,
+sum(case when [Month] = @m3 then num_unique_application else 0 end) as m3_activity,
+sum(case when [Month] = @m4 then num_unique_application else 0 end) as m4_activity
+from cte_submission_history2
+group by DealerName
+)
+
+select d.dealer_key,h3.DealerName, d.[salesperson],m1_activity,m2_activity,m3_activity,m4_activity,
+case 
+	when (m2_activity>=3 and m3_activity>=3 and m4_activity>=3) then 'consistently_active'
+    else 'not active'
+end as sales_status, 
+case 
+    when (m2_activity>=5 and m3_activity>=5 and m4_activity<=3) then 'in_person_visit'
+	else 'no_visit'
+end as visit_status
+from cte_submission_history3 h3 join datahub..dealer2 d
+on h3.DealerName = d.DealerName
+end 
+go
+
+declare @m4 datetime 
+set @m4 = '2022-07-01'
+declare @m1 datetime = DATEADD(MONTH,-3,@m4)
+declare @m2 datetime= DATEADD(MONTH,-2,@m4)
+declare @m3 datetime = DATEADD(MONTH,-1,@m4)
+delete from car_lease.dealer_activity_overview
+insert into car_lease.dealer_activity_overview
+exec usp_dealer_activity_overview @m1=@m1,@m2=@m2,@m3=@m3,@m4=@m4
+
+go
+
+select * from car_lease.dealer_activity_overview
+
+select * from car_lease.dealer_activity_overview
+where visit_status = 'in_person_visit'
+
+
+-----------------------------------------------------------------------------------------------------------------
+---The profitability of applications originating from each salesperson's dealer base-----------------------------------------------------------------
+go
+
+create or alter view vw_profitability_salesperson as
+with cte_profitability as 
+(
+select d.salesperson,sum(h.revenue) as rev,
+cast(sum(h.revenue) as float)/
+(select cast(sum(revenue) as float) as total_rev
+from datahub.car_lease.measure_submission_history h) as rev_percentage
+from datahub.car_lease.measure_submission_history h join datahub..application a 
+on h.application_id= a.application_id
+left join datahub..dealer2 d 
+on a.dealer_key= d.dealer_key
+where a.status='approved'
+group by d.salesperson
+)
+
+select salesperson,
+format(rev,'C0') as revenue,
+format(rev_percentage,'p') as rev_percentage
+from cte_profitability
+
+select * from vw_profitability_salesperson
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+------A monthly trending of the average revenue brought in by approved applications submitted by each salesperson's dealer base-------------------------
+go
+
+create or alter procedure usp_sales_avg_rev(@m1 datetime,@m2 datetime,@m3 datetime,@m4 datetime) 
+as 
+begin
+
+with cte_year_month_salesperson as 
+(
+select distinct [Month],[Date],salesperson
+from car_lease.DimDate cross join 
+(select distinct salesperson
+ from datahub..dealer2) a
+),
+
+cte_submission_history as 
+(
+select d.salesperson,h.submission_date,revenue as rev
+from datahub.car_lease.measure_submission_history h join datahub..application a 
+on h.application_id = a.application_id
+join datahub..dealer2 d 
+on a.dealer_key = d.dealer_key
+where a.status='approved'
+--and d.salesperson='Jim Vogler'
+),
+
+cte_submission_history2 as
+(
+select top 10000 t.[Month],t.salesperson,coalesce(avg(h2.rev),0) as avg_rev
+from cte_year_month_salesperson t left join cte_submission_history h2
+on t.[Date] = convert(varchar,h2.submission_date,23) and t.salesperson = h2.salesperson
+where t.[Month] between @m1 and @m4
+group by t.salesperson,t.[Month]
+order by t.salesperson,t.[Month]
+)
+
+select salesperson,
+sum(case when [Month] = @m1 then avg_rev else 0 end) as m1_avg_rev,
+sum(case when [Month] = @m2 then avg_rev else 0 end) as m2_avg_rev,
+sum(case when [Month] = @m3 then avg_rev else 0 end) as m3_avg_rev,
+sum(case when [Month] = @m4 then avg_rev else 0 end) as m4_avg_rev
+from cte_submission_history2
+group by salesperson
+
+
+end 
+go
+
+
+declare @m4 datetime 
+set @m4 = '2022-07-01'
+declare @m1 datetime = DATEADD(MONTH,-3,@m4)
+declare @m2 datetime= DATEADD(MONTH,-2,@m4)
+declare @m3 datetime = DATEADD(MONTH,-1,@m4)
+exec usp_sales_avg_rev @m1=@m1,@m2=@m2,@m3=@m3,@m4=@m4
+
+go 
